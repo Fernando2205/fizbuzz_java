@@ -36,7 +36,7 @@ if [ ! -f "$output_file" ]; then
 fi
 
 # Comparing files
-diff $expected_file $output_file > $diff_file
+diff -b $expected_file $output_file > $diff_file
 
 # Check the exit status of the diff command
 if [ $? -eq 0 ]; then
